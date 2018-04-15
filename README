@@ -1,0 +1,32 @@
+################################################################
+##########                                           ###########
+##########     Simple employee management system     ###########
+##########                                           ###########
+################################################################
+
+
+## building
+
+    $ mvn clean install
+
+
+## running
+
+    $ java -jar target/simple-emp-mng-sys-0.1.0.jar
+
+
+## consuming endpoints (using linux scripts - curl underneath)
+
+    $ cd scripts/
+    $ ./postemployee.sh zdzislaw malina malina@mail.com Developer
+    $ ./getemployees.sh
+    $ ./getemployees.sh 'forename=zdzislaw'
+    $ ./getemployees.sh 'forename=zdzislaw&surname=malina&email=malina@mail.com'
+    $ ./getpositions.sh
+    $ ./deleteemployee.sh <id>
+
+    also:
+    
+    $ ./postposition.sh Tester
+    $ ./getemployee.sh <id>
+    $ ./getposition.sh <id>
